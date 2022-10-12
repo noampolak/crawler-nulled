@@ -1,0 +1,17 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Python: Launch Scrapy Spider",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${fileDirname}/../crawler",
+            "module": "scrapy",
+            "args": [
+                "crawl",
+                "NulledVipLeaksSpider"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

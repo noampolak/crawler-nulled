@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "crawler-nulled"
+version = "0.1.0"
+description = ""
+authors = ["Noam polak <noampolak@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+pydantic = "^1.8.2"
+Scrapy = "^2.6.3"
+scrapy-splash = "^0.8.0"
+black = "^22.10.0"
+flake8 = "^4.0.1"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
