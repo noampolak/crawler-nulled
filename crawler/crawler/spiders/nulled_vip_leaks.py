@@ -6,7 +6,7 @@ from scrapy.utils.python import to_unicode
 
 from .. import settings
 
-import random
+# import random
 
 user_agent_list = [
     # 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36',
@@ -32,9 +32,9 @@ class NulledVipLeaksSpider(CrawlSpider):
                 to_unicode(url),
                 self.parse_links,
                 cookies={
-                    "nulledmember_id": 5417320,
-                    "nulledpass_hash": "6f3ded8072218af80cf3ec77e4f05cb4",
-                    "nulledsession_id": "36b94141227aeed9bc5d6fbeb07fc064",
+                    "nulledmember_id": settings.NULLEDMEMBER_ID,
+                    "nulledpass_hash": settings.NULLEDPASS_HASH,
+                    "nulledsession_id": settings.NULLEDSESSION_ID,
                     # "User-Agent": user_agent_list[random.randint(0, len(user_agent_list)-1)]
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18363"
 
@@ -63,7 +63,6 @@ class NulledVipLeaksSpider(CrawlSpider):
         for topic in topics:
             links.append(topic.attrib["href"])
 
-        # links = [link_block.css('a').attrib['href'] for link_block in response.css('.blog-entry-title')]
         logging.info(f"Number of links are {len(links)}")
         next_page_button = response.css('.topic_controls').css(".next a")
         next_page_url = next_page_button.attrib["href"]

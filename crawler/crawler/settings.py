@@ -91,3 +91,7 @@ RETRY_HTTP_CODES = [500, 502, 503, 504, 522, 524, 408, 429, 403]
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
 }
+
+NULLEDMEMBER_ID = 5417320
+NULLEDPASS_HASH = "6f3ded8072218af80cf3ec77e4f05cb4"
+NULLEDSESSION_ID = "36b94141227aeed9bc5d6fbeb07fc064"
