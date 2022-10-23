@@ -6,7 +6,7 @@ It uses AutoThrottling to fool the website as much as it can so it won't be bloc
 Clone the repo \
 `git clone git@github.com:noampolak/crawler-nulled.git` \
 Install dependencies \
-`poetry install` \
+`poetry install` 
 
 ## usage:
 Go to crawler folder \
